@@ -30,14 +30,17 @@ p, div{
 }
 .heroes {
   align-self: center;
+  margin: 15px;
+  height: auto;
+  width: 350px;
 }
 .new_super, .search_bar, .limit_bar {
   margin: 20px auto;
   text-align: center;
 }
 .dc {
-  background-color: blue;
+  border: 2px solid rgba(1, 114, 239, 1);
 }
 .marvel {
-  background-color: red;
+  border: 2px solid rgba(240, 20, 30, 1);
 }

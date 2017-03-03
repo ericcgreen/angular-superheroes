@@ -30,7 +30,8 @@
   <div class="heroes_container">
     <div class="heroes" ng-repeat='supersignal in vm.supersignals | filter: signal | limitTo: numLimit' ng-class="{'dc': supersignal.comic == 'DC', 'marvel': supersignal.comic == 'Marvel'}">
 
-      <p><img src={{supersignal.photo}}></p>
+      <button ng-click="show_photo = !show_photo">View Photo</button>
+      <img ng-show="show_photo" src={{supersignal.photo}}>
 
       <h2> Hero: {{supersignal.name}} </h2>
 
