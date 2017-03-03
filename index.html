@@ -8,25 +8,36 @@
 </head>
 
 <body ng-controller='supersingleCtrl as vm'>
-  <div ng-repeat='supersignal in vm.supersignals | filter: signal'>
-    <p>
-      {{ $index + 1 }}
-      <img src={{supersignal.photo}}>
-    </p>
-    <p> {{supersignal.name}} </p>
-    <p> {{supersignal.phone_number}} </p>
+  <nav>
+    <div class="new_super">
+      Name: <input type="text" ng-model ='vm.newSuperSignalName'>
+      Phone number: <input type="text" ng-model ='vm.newSuperSignalPhone'>
+      Comic: <input type="text" ng-model ='vm.newSuperSignalComic'>
+      Photo: <input type="text" ng-model ='vm.newSuperSigalPhoto'>
+        <button ng-click="vm.addGrumblr()">Add New Hero</buton>
+    </div>
+
+    <div class="limit_features">
+    <div class="search_bar">
+      <input type="text" ng-model='signal' class="inputText" placeholder="Search">
+    </div>
+    <div class="limit_bar">
+      <input type="number" ng-model='numLimit' class="inputNumber" placeholder="Heroes Per Page">
+    </div>
   </div>
+  </nav>
 
-<div class="new_super">
-  Name: <input type="text" ng-model ='vm.newSuperSignalName'>
-  Phone number: <input type="text" ng-model ='vm.newSuperSignalPhone'>
-  Comic: <input type="text" ng-model ='vm.newSuperSignalComic'>
-  Photo: <input type="text" ng-model ='vm.newSuperSigalPhoto'>
-  <button ng-click="vm.addGrumblr()">Add New Post</buton>
-</div>
+  <div class="heroes_container">
+    <div class="heroes" ng-repeat='supersignal in vm.supersignals | filter: signal | limitTo: numLimit'>
+      <p>{{ $index + 1 }}</p>
 
-<div class="search_bar">
-  <input type="text" ng-model='signal' class="inputText" placeholder="Search">
+      <p><img src={{supersignal.photo}}></p>
+
+      <p> {{supersignal.name}} </p>
+
+      <p> {{supersignal.phone_number}} </p>
+
+  </div>
 </div>
 
   <script src="app.js"></script>
