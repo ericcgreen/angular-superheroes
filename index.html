@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="supersingleApp">
 <head>
   <meta charset="UTF-8">
   <title>Superhero Phone Book</title>
   <link rel="stylesheet" href="style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
 </head>
-<body>
+
+<body ng-controller='supersingleCtrl as vm'>
+  <div ng-repeat='supersignal in vm.supersignals | filter: signal'>
+    <p>
+      {{ $index + 1 }}
+      <img src={{supersignal.photo}}>
+    </p>
+    <p> {{supersignal.name}} </p>
+    <p> {{supersignal.phone_number}} </p>
+  </div>
+
+<div class="new_super">
+  Name: <input type="text" ng-model ='vm.newSuperSignalName'>
+  Phone number: <input type="text" ng-model ='vm.newSuperSignalPhone'>
+  Comic: <input type="text" ng-model ='vm.newSuperSignalComic'>
+  Photo: <input type="text" ng-model ='vm.newSuperSigalPhoto'>
+  <button ng-click="vm.addGrumblr()">Add New Post</buton>
+</div>
+
+<div class="search_bar">
+  <input type="text" ng-model='signal' class="inputText" placeholder="Search">
+</div>
 
   <script src="app.js"></script>
 </body>
