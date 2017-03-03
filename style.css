@@ -19,8 +19,13 @@ img {
 div {
   text-align: center;
 }
-p, div{
+p, div {
   margin: auto;
+}
+button {
+  height: 30px;
+  width: 100px;
+  margin: 15px auto;
 }
 .heroes_container, .limit_features {
   display: flex;
