@@ -29,6 +29,10 @@ button {
   width: 100px;
   margin: 15px auto;
   font-family: 'Share Tech Mono', monospace;
+  transition-duration: 0.3s;
+}
+button:hover {
+  background-color: white;
 }
 .heroes_container, .limit_features {
   display: flex;
