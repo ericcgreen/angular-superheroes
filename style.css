@@ -21,11 +21,14 @@ div {
 }
 p, div {
   margin: auto;
+  font-family: 'Share Tech Mono', monospace;
 }
 button {
+  background-color: rgba(255, 208, 44, 1);
   height: 30px;
   width: 100px;
   margin: 15px auto;
+  font-family: 'Share Tech Mono', monospace;
 }
 .heroes_container, .limit_features {
   display: flex;
