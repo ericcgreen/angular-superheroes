@@ -28,14 +28,13 @@
   </nav>
 
   <div class="heroes_container">
-    <div class="heroes" ng-repeat='supersignal in vm.supersignals | filter: signal | limitTo: numLimit'>
-      <p>{{ $index + 1 }}</p>
+    <div class="heroes" ng-repeat='supersignal in vm.supersignals | filter: signal | limitTo: numLimit' ng-class="{'dc': supersignal.comic == 'DC', 'marvel': supersignal.comic == 'Marvel'}">
 
       <p><img src={{supersignal.photo}}></p>
 
-      <p> {{supersignal.name}} </p>
+      <h2> Hero: {{supersignal.name}} </h2>
 
-      <p> {{supersignal.phone_number}} </p>
+      <h3> Phone Number: {{supersignal.phone_number}} </h3>
 
   </div>
 </div>
