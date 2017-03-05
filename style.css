@@ -1,8 +1,16 @@
+html{
+  margin: 0;
+  height: 100%;
+}
 body{
   display: flex;
   justify-content: center;
   align-content: space-around;
   flex-wrap: wrap;
+  background: url('http://www.eliotrbrown.com/artwork/0007.jpg');
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-attachment: fixed;
 }
 nav {
   align-self: center;
@@ -22,6 +30,7 @@ div {
 p, div {
   margin: auto;
   font-family: 'Share Tech Mono', monospace;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 button {
   background-color: rgba(255, 208, 44, 1);
@@ -29,7 +38,7 @@ button {
   width: 100px;
   margin: 15px auto;
   font-family: 'Share Tech Mono', monospace;
-  transition-duration: 0.3s;
+  transition-duration: 0.3s;x
 }
 button:hover {
   background-color: white;
@@ -45,6 +54,7 @@ button:hover {
   margin: 15px;
   height: auto;
   width: 350px;
+  background-color: rgba(255,255,255,.7)
 }
 .new_super, .search_bar, .limit_bar {
   margin: 20px auto;
