@@ -1,8 +1,19 @@
-nav {
-  align-self: center;
-  position: static;
-  margin: 40px auto;
-  width: 100%;
-  height: 100px;
+.c-nav {
+  position: absolute;
+  top: 0;
+  margin: auto;
+  width: 100vw;
+  height: 8em;
+  display: grid;
   border-bottom: 3px solid blue;
+
+  .c-add-form, .c-search-options {
+    margin: 20px auto;
+    text-align: center;
+  }
 }
+
+// .new_super, .search_bar, .limit_bar {
+//   margin: 20px auto;
+//   text-align: center;
+// }

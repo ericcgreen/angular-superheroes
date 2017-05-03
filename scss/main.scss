@@ -1,29 +1,25 @@
 @import 'nav';
+@import 'container';
 
 $font-stack: 'Share Tech Mono', monospace;
 
-html{
+html {
   margin: 0;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
 }
-body{
-  display: flex;
-  justify-content: center;
-  align-content: space-around;
-  flex-wrap: wrap;
+body {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+  "c-nav"
+  "c-content";
   background: url('http://www.eliotrbrown.com/artwork/0007.jpg');
   background-repeat: repeat-x;
   background-position: bottom;
   background-attachment: fixed;
 }
-nav {
-  align-self: center;
-  position: static;
-  margin: 40px auto;
-  width: 100%;
-  height: 100px;
-  border-bottom: 3px solid blue;
-}
+
 img {
   height: 300px;
   width: 300px;
@@ -47,23 +43,7 @@ button {
 button:hover {
   background-color: white;
 }
-.heroes_container, .limit_features {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.heroes {
-  align-self: center;
-  margin: 15px;
-  height: auto;
-  width: 350px;
-  background-color: rgba(255,255,255,.7);
-}
-.new_super, .search_bar, .limit_bar {
-  margin: 20px auto;
-  text-align: center;
-}
+
 .dc {
   border: 2px solid rgba(1, 114, 239, 1);
 }
