@@ -3,29 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Superhero Phone Book</title>
-  <link rel="stylesheet" href="style.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-   <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
 </head>
 
 <body ng-controller='supersingleCtrl as vm'>
-  <nav>
-    <div class="new_super">
-      Name: <input type="text" ng-model ='vm.newSuperSignalName'>
-      Phone number: <input type="text" ng-model ='vm.newSuperSignalPhone'>
-      Comic: <input type="text" ng-model ='vm.newSuperSignalComic'>
-      Photo: <input type="text" ng-model ='vm.newSuperSigalPhoto'>
+  <nav class="c-nav">
+    <form class="c-add-form">
+      <p>Name: <input type="text" ng-model ='vm.newSuperSignalName'></p>
+      <p>Phone number: <input type="text" ng-model ='vm.newSuperSignalPhone'></p>
+      <p>Comic: <input type="text" ng-model ='vm.newSuperSignalComic'></p>
+      <p>Photo: <input type="text" ng-model ='vm.newSuperSigalPhoto'></p>
         <button ng-click="vm.addSuperSignal()">Add New Hero</buton>
-    </div>
+    </form>
 
-    <div class="limit_features">
-    <div class="search_bar">
-      <input type="text" ng-model='signal' class="inputText" placeholder="Search">
+    <div class="c-search-options">
+      <div class="c-search-field">
+        <input type="text" ng-model='signal' class="c-search-field__text" placeholder="Search">
+      </div>
+      <div class="c-limit-field">
+        <input type="number" ng-model='numLimit' class="c-limit-field__text" placeholder="Heroes Per Page">
+      </div>
     </div>
-    <div class="limit_bar">
-      <input type="number" ng-model='numLimit' class="inputNumber" placeholder="Heroes Per Page">
-    </div>
-  </div>
   </nav>
 
   <div class="heroes_container">
