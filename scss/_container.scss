@@ -1,10 +1,10 @@
-.u-heroes__dc--style {
+.t-heroes__dc--style {
   border: 2px solid rgba(1, 114, 239, 1);
 }
-.u-heroes__marvel--style {
+.t-heroes__marvel--style {
   border: 2px solid rgba(240, 20, 30, 1);
 }
-.u-heroes__other--style {
+.t-heroes__other--style {
   border: 2px solid rgba(250, 250, 150, 1);
 }
 .c-heroes-container {
@@ -20,7 +20,7 @@
   width: 350px;
   background-color: rgba(255,255,255,.7);
 }
-.c-edit-form--style {
+.c-edit-form {
   margin: auto;
   width: 200px;
   display: flex;
@@ -28,11 +28,10 @@
   justify-content: center;
   flex-direction: column;
 }
-
-.u-edit-input-field--style {
-  border: 1px solid blue;
+.t-edit-input-field--style {
+  border: 1px solid grey;
 }
-.u-heroes__image {
+.t-heroes__image {
   height: 300px;
   width: 300px;
 }

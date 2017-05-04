@@ -2,54 +2,54 @@
 <html lang="en" ng-app="supersingleApp">
 <head>
   <meta charset="UTF-8">
-  <title>Superhero Phone Book</title>
+  <title>Hero Pages</title>
   <link rel="stylesheet" href="css/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
 </head>
 
   <body ng-controller='supersingleCtrl as vm'>
-    <nav class="c-nav">
-      <div class="c-add-form">
+    <nav class="c-nav t-border-bottom--gradient">
+      <div class="c-add-form u-text--center">
         <form>
-          <label>Name: </label><input class="c-input-field u-add-input-field--style" type="text" ng-model='vm.newSuperSignalName' placeholder="Hero">
-          <label>Phone number: </label><input class="c-input-field u-add-input-field--style" type="tel" min="3" max="10" ng-model='vm.newSuperSignalPhone' placeholder="xxx-xxx-xxxx">
+          <label>Name: </label><input class="c-input-field t-add-input-field--style u-text--center" type="text" ng-model='vm.newSuperSignalName' placeholder="Hero" required>
+          <label>Phone number: </label><input class="c-input-field t-add-input-field--style u-text--center" type="tel" min="3" max="10" ng-model='vm.newSuperSignalPhone' placeholder="xxx-xxx-xxxx" required>
           <label>Comic: </label>
-            <select class="c-input-field u-add-input-field--style" name="Comic" type="text" ng-model='vm.newSuperSignalComic'>
+            <select class="c-input-field t-add-input-field--style u-text--center" name="Comic" type="text" ng-model='vm.newSuperSignalComic' required>
               <option value="DC">DC</option>
               <option value="Marvel">Marvel</option>
               <option value="Other">Other</option>
             </select>
-          <label>Photo: </label><input class="c-input-field u-add-input-field--style" type="text" ng-model ='vm.newSuperSigalPhoto' placeholder="Photo URL">
-            <button class="c-btn u-btn--style" ng-click="vm.addSuperSignal()">Add New Hero</buton>
+          <label>Photo: </label><input class="c-input-field t-add-input-field--style u-text--center" type="text" ng-model ='vm.newSuperSigalPhoto' placeholder="Photo URL" required>
+            <button class="c-btn t-btn--style" ng-click="vm.addSuperSignal()">Add New Hero</buton>
         </form>
       </div>
       <div class="c-search-options">
         <div class="c-search-options__search">
-          <input type="text" ng-model='signal' class="c-input-field u-search-input-field--style" placeholder="Search">
+          <input type="text" ng-model='signal' class="c-input-field t-search-input-field--style u-text--center" placeholder="Search">
         </div>
         <div class="c-search-options__limit">
-          <input type="number" ng-model='numLimit' class="c-input-field u-search-input-field--style" placeholder="Heroes Per Page">
+          <input type="number" ng-model='numLimit' class="c-input-field t-search-input-field--style u-text--center" placeholder="Heroes Per Page">
         </div>
       </div>
     </nav>
 
     <div class="c-heroes-container">
-      <div class="c-heroes" ng-repeat='supersignal in vm.supersignals | filter: signal | limitTo: numLimit' ng-class="{'u-heroes__dc--style': supersignal.comic == 'DC', 'u-heroes__marvel--style': supersignal.comic == 'Marvel', 'u-heroes__other--style': supersignal.comic == 'Other'}">
-        <button class="c-btn u-btn--style" ng-click="show_photo = !show_photo">View Photo</button>
-          <img class="u-heroes__image" ng-show="show_photo" src={{supersignal.photo}}>
-        <button class="c-btn u-btn--style" ng-click="edit = !edit">Edit</button>
+      <div class="c-heroes u-text--center" ng-repeat='supersignal in vm.supersignals | filter: signal | limitTo: numLimit' ng-class="{'t-heroes__dc--style': supersignal.comic == 'DC', 't-heroes__marvel--style': supersignal.comic == 'Marvel', 't-heroes__other--style': supersignal.comic == 'Other'}">
+        <button class="c-btn t-btn--style" ng-click="show_photo = !show_photo">View Photo</button>
+          <img class="t-heroes__image" ng-show="show_photo" src={{supersignal.photo}}>
+        <button class="c-btn t-btn--style" ng-click="edit = !edit">Edit</button>
           <div ng-show="edit" ng-submit="edit = false">
-            <form class="c-edit-form--style">
-              <label>Name: </label><input class="c-input-field u-edit-input-field--style" type="text" ng-model="supersignal.name" placeholder="Name" ng-required>
-              <label>Phone: </label><input class="c-input-field u-edit-input-field--style" type="text" ng-model="supersignal.phone_number" placeholder="xxx-xxx-xxxx" ng-required>
-              <label>Comic: </label><select class="c-input-field u-edit-input-field--style" name="Comic" type="text" ng-model="supersignal.comic" placeholder="Comic" ng-required>
+            <form class="c-edit-form">
+              <label>Name: </label><input class="c-input-field t-edit-input-field--style u-text--center" type="text" ng-model="supersignal.name" placeholder="Name" ng-required>
+              <label>Phone: </label><input class="c-input-field t-edit-input-field--style u-text--center" type="text" ng-model="supersignal.phone_number" placeholder="xxx-xxx-xxxx" ng-required>
+              <label>Comic: </label><select class="c-input-field t-edit-input-field--style u-text--center" name="Comic" type="text" ng-model="supersignal.comic" placeholder="Comic" ng-required>
                 <option value="DC">DC</option>
                 <option value="Marvel">Marvel</option>
                 <option value="Other">Other</option>
               </select>
-              <label>Photo: </label><input class="c-input-field u-edit-input-field--style" type="text" ng-model="supersignal.photo" placeholder="Photo" ng-required placeholder="Photo URL">
-              <button class="c-btn u-btn--style" type="submit">Save</button>
+              <label>Photo: </label><input class="c-input-field t-edit-input-field--style u-text--center" type="text" ng-model="supersignal.photo" placeholder="Photo" ng-required placeholder="Photo URL">
+              <button class="c-btn t-btn--style" type="submit">Save</button>
             </form>
           </div>
         <h2> Hero: {{supersignal.name}} </h2>

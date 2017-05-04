@@ -7,14 +7,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border-bottom: 3px solid blue; }
+  justify-content: center; }
+
+.t-border-bottom--gradient {
+  border-bottom: 3px solid transparent;
+  -moz-border-image: -moz-linear-gradient(top left, blue 50%, red 100%);
+  -webkit-border-image: -webkit-linear-gradient(top left, blue 50%, red 100%);
+  border-image: linear-gradient(to bottom right, blue 50%, red 100%);
+  border-image-slice: 1; }
 
 .c-add-form {
   height: 50px;
   width: 100%;
-  margin: auto;
-  text-align: center; }
+  margin: auto; }
 
 .c-search-options {
   height: 50px;
@@ -23,16 +28,16 @@
   display: flex;
   justify-content: space-around; }
 
-.u-add-input-field--style {
+.t-add-input-field--style {
   border: 1px solid black; }
 
-.u-heroes__dc--style {
+.t-heroes__dc--style {
   border: 2px solid #0172ef; }
 
-.u-heroes__marvel--style {
+.t-heroes__marvel--style {
   border: 2px solid #f0141e; }
 
-.u-heroes__other--style {
+.t-heroes__other--style {
   border: 2px solid #fafa96; }
 
 .c-heroes-container {
@@ -48,7 +53,7 @@
   width: 350px;
   background-color: rgba(255, 255, 255, 0.7); }
 
-.c-edit-form--style {
+.c-edit-form {
   margin: auto;
   width: 200px;
   display: flex;
@@ -56,12 +61,15 @@
   justify-content: center;
   flex-direction: column; }
 
-.u-edit-input-field--style {
-  border: 1px solid blue; }
+.t-edit-input-field--style {
+  border: 1px solid grey; }
 
-.u-heroes__image {
+.t-heroes__image {
   height: 300px;
   width: 300px; }
+
+*:focus {
+  outline: 0; }
 
 html {
   margin: 0;
@@ -74,13 +82,13 @@ body {
   background-position: bottom;
   background-attachment: fixed; }
 
-div {
-  text-align: center; }
-
 p, div {
   margin: auto;
   font: "Share Tech Mono", monospace;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; }
+
+button:hover {
+  background-color: white; }
 
 .c-btn {
   height: 30px;
@@ -88,7 +96,7 @@ p, div {
   margin: 15px auto;
   font: "Share Tech Mono", monospace; }
 
-.u-btn--style {
+.t-btn--style {
   background-color: #ffd02c;
   transition-duration: 0.3s; }
 
@@ -96,10 +104,7 @@ p, div {
   height: 20px;
   width: 150px; }
 
-button:hover {
-  background-color: white; }
-
-*:focus {
-  outline: 0; }
+.u-text--center {
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

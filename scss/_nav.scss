@@ -8,13 +8,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-bottom: 3px solid blue;
 }
+.t-border-bottom--gradient {
+  border-bottom: 3px solid transparent;
+    -moz-border-image: -moz-linear-gradient(top left, blue 50%, red 100%);
+    -webkit-border-image: -webkit-linear-gradient(top left, blue 50%, red 100%);
+    border-image: linear-gradient(to bottom right, blue 50%, red 100%);
+    border-image-slice: 1;
+}
+
 .c-add-form {
   height: 50px;
   width: 100%;
   margin: auto;
-  text-align: center;
 }
 .c-search-options {
   height: 50px;
@@ -24,10 +30,10 @@
   justify-content: space-around;
 }
 
-.u-add-input-field--style {
+.t-add-input-field--style {
   border: 1px solid black;
 }
 
-.u-search-input-field--style {
-  
+.t-search-input-field--style {
+
 }

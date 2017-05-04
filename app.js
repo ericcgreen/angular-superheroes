@@ -6,7 +6,6 @@ let supersignalData = [
   {name:"Nightwing", phone_number:"555-555-5555", comic:"DC", photo:"http://www.honcho-sfx.com/blog/wp-content/uploads/2017/02/Nightwing-300x300.jpg"},
 ]
 
-
 angular
   .module('supersingleApp', [])
   .controller('supersingleCtrl', [supersignalController])
