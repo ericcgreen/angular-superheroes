@@ -16,10 +16,6 @@ body {
   background-attachment: fixed;
 }
 
-img {
-  height: 300px;
-  width: 300px;
-}
 div {
   text-align: center;
 }
@@ -39,6 +35,15 @@ p, div {
   transition-duration: 0.3s;
 }
 
+.c-input-field {
+  height: 20px;
+  width: 150px;
+}
+
 button:hover {
   background-color: white;
+}
+
+*:focus {
+  outline:0;
 }

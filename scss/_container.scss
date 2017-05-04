@@ -1,3 +1,12 @@
+.u-heroes__dc--style {
+  border: 2px solid rgba(1, 114, 239, 1);
+}
+.u-heroes__marvel--style {
+  border: 2px solid rgba(240, 20, 30, 1);
+}
+.u-heroes__other--style {
+  border: 2px solid rgba(250, 250, 150, 1);
+}
 .c-heroes-container {
   margin-top: 15em;
   display: flex;
@@ -11,18 +20,19 @@
   width: 350px;
   background-color: rgba(255,255,255,.7);
 }
-.u-dc__style {
-  border: 2px solid rgba(1, 114, 239, 1);
-}
-.u-marvel__style {
-  border: 2px solid rgba(240, 20, 30, 1);
-}
-.u-other__style {
-  border: 2px solid rgba(250, 250, 150, 1);
-}
-
-.c-edit-form--style{
+.c-edit-form--style {
+  margin: auto;
+  width: 200px;
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.u-edit-input-field--style {
+  border: 1px solid blue;
+}
+.u-heroes__image {
+  height: 300px;
+  width: 300px;
 }
