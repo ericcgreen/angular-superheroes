@@ -3,17 +3,28 @@
   top: 0;
   margin: auto;
   width: 100vw;
-  height: 8em;
-  display: grid;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-bottom: 3px solid blue;
-
-  .c-add-form, .c-search-options {
-    margin: 20px auto;
-    text-align: center;
-  }
+}
+.c-add-form {
+  height: 50px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.c-search-options {
+  height: 50px;
+  width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
 }
 
-// .new_super, .search_bar, .limit_bar {
-//   margin: 20px auto;
-//   text-align: center;
-// }
+.u-nav-input-field--style {
+  height: 20px;
+  width: 150px;
+}

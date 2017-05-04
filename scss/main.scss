@@ -8,12 +8,8 @@ html {
   height: 100vh;
   width: 100vw;
 }
+
 body {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-areas:
-  "c-nav"
-  "c-content";
   background: url('http://www.eliotrbrown.com/artwork/0007.jpg');
   background-repeat: repeat-x;
   background-position: bottom;
@@ -32,21 +28,17 @@ p, div {
   font: $font-stack;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
-button {
-  background-color: rgba(255, 208, 44, 1);
+.c-btn {
   height: 30px;
   width: 100px;
   margin: 15px auto;
-  font-family: 'Share Tech Mono', monospace;
+  font: $font-stack;
+}
+.u-btn--style {
+  background-color: rgba(255, 208, 44, 1);
   transition-duration: 0.3s;
 }
+
 button:hover {
   background-color: white;
-}
-
-.dc {
-  border: 2px solid rgba(1, 114, 239, 1);
-}
-.marvel {
-  border: 2px solid rgba(240, 20, 30, 1);
 }

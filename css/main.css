@@ -3,23 +3,56 @@
   top: 0;
   margin: auto;
   width: 100vw;
-  height: 8em;
-  display: grid;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-bottom: 3px solid blue; }
-  .c-nav .c-add-form, .c-nav .c-search-options {
-    margin: 20px auto;
-    text-align: center; }
 
-.heroes_container {
-  margin-top: 10em;
-  display: grid; }
+.c-add-form {
+  height: 50px;
+  width: 100%;
+  margin: auto;
+  text-align: center; }
 
-.heroes {
+.c-search-options {
+  height: 50px;
+  width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around; }
+
+.u-nav-input-field--style {
+  height: 20px;
+  width: 150px; }
+
+.c-heroes-container {
+  margin-top: 15em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.c-heroes {
   align-self: center;
   margin: 15px;
   height: auto;
   width: 350px;
   background-color: rgba(255, 255, 255, 0.7); }
+
+.u-dc__style {
+  border: 2px solid #0172ef; }
+
+.u-marvel__style {
+  border: 2px solid #f0141e; }
+
+.u-other__style {
+  border: 2px solid #fafa96; }
+
+.c-edit-form--style {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
 
 html {
   margin: 0;
@@ -27,9 +60,6 @@ html {
   width: 100vw; }
 
 body {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-areas: "c-nav" "c-content";
   background: url("http://www.eliotrbrown.com/artwork/0007.jpg");
   background-repeat: repeat-x;
   background-position: bottom;
@@ -47,21 +77,17 @@ p, div {
   font: "Share Tech Mono", monospace;
   text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; }
 
-button {
-  background-color: #ffd02c;
+.c-btn {
   height: 30px;
   width: 100px;
   margin: 15px auto;
-  font-family: 'Share Tech Mono', monospace;
+  font: "Share Tech Mono", monospace; }
+
+.u-btn--style {
+  background-color: #ffd02c;
   transition-duration: 0.3s; }
 
 button:hover {
   background-color: white; }
-
-.dc {
-  border: 2px solid #0172ef; }
-
-.marvel {
-  border: 2px solid #f0141e; }
 
 /*# sourceMappingURL=main.css.map */
